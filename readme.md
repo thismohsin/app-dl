@@ -1,6 +1,7 @@
 - https://poloclub.github.io/transformer-explainer/
 - https://bbycroft.net/llm
-
+- https://github.com/mlabonne/llm-course
+- rabst
 ```
 Tokens: ['the', 'sky', 'is', 'blue']
 
@@ -102,39 +103,38 @@ Weighted Values:
 
 'the' weighted representation:
   Raw values: [1.56120781 1.70120781 1.75120781 1.76058516]
-  Meaning context: How the gets influenced by other tokens
+  Meaning context: How 'the' gets influenced by other tokens
 
 'sky' weighted representation:
   Raw values: [1.80030983 1.94030983 1.99030983 1.98640372]
-  Meaning context: How sky gets influenced by other tokens
+  Meaning context: How 'sky' gets influenced by other tokens
 
 'is' weighted representation:
   Raw values: [1.87235144 2.01235144 2.06235144 2.05444303]
-  Meaning context: How is gets influenced by other tokens
+  Meaning context: How 'is' gets influenced by other tokens
 
 'blue' weighted representation:
   Raw values: [1.89623425 2.03623425 2.08623425 2.07699902]
-  Meaning context: How blue gets influenced by other tokens
+  Meaning context: How 'blue' gets influenced by other tokens
 
 Semantic Relationship Interpretation:
 
 'the' (article referring to a specific noun):
-Attn sorted influence: [(3, np.float64(0.5741085369204841)), (2, np.float64(0.2579377991156912)), (1, np.float64(0.11588733477039649)), (0, np.float64(0.05206632919342827))]
+Attn sorted influence of attention_probs [(3, np.float64(0.5741085369204841)), (2, np.float64(0.2579377991156912)), (1, np.float64(0.11588733477039649)), (0, np.float64(0.05206632919342827))]
   Strongly influenced by blue (color representing clear atmosphere): 0.5741
   Strongly influenced by is (state of being verb): 0.2579
   Strongly influenced by sky (celestial dome above earth): 0.1159
 
 'sky' (celestial dome above earth):
-Attn sorted influence: [(3, np.float64(0.8295087429201997)), (2, np.float64(0.1420151368653065)), (1, np.float64(0.024313546145241723)), (0, np.float64(0.0041625740692520004))]
+Attn sorted influence of attention_probs [(3, np.float64(0.8295087429201997)), (2, np.float64(0.1420151368653065)), (1, np.float64(0.024313546145241723)), (0, np.float64(0.0041625740692520004))]
   Strongly influenced by blue (color representing clear atmosphere): 0.8295
   Strongly influenced by is (state of being verb): 0.1420
 
 'is' (state of being verb):
-Attn sorted influence: [(3, np.float64(0.9347780746105904)), (2, np.float64(0.06098385443577424)), (1, np.float64(0.003978517043623401)), (0, np.float64(0.0002595539100119022))]
+Attn sorted influence of attention_probs [(3, np.float64(0.9347780746105904)), (2, np.float64(0.06098385443577424)), (1, np.float64(0.003978517043623401)), (0, np.float64(0.0002595539100119022))]
   Strongly influenced by blue (color representing clear atmosphere): 0.9348
 
 'blue' (color representing clear atmosphere):
-Attn sorted influence: [(3, np.float64(0.9751404919502488)), (2, np.float64(0.024241876096470095)), (1, np.float64(0.0006026501427515234)), (0, np.float64(1.4981810529561968e-05))]
+Attn sorted influence of attention_probs [(3, np.float64(0.9751404919502488)), (2, np.float64(0.024241876096470095)), (1, np.float64(0.0006026501427515234)), (0, np.float64(1.4981810529561968e-05))]
   Strongly influenced by is (state of being verb): 0.0242
-(venv) I509335@C02FLET7MD6M dl-fundamentals % 
 ```
